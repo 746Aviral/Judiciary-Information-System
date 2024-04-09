@@ -1,12 +1,12 @@
 const axios=require("axios");
 
 exports.homeRoutes=(req,res)=>{
-axios.get("http://localhost:5000/api/users")
+axios.get("https://judiciary-information-system-qfdw.onrender.com/users")
 res.render('pages/index');
 }
 
 exports.viewCase=(req,res)=>{
-axios.get('http://localhost:5000/api/users')
+axios.get('https://judiciary-information-system-qfdw.onrender.com/users')
         .then(function(response){
             res.render('pages/viewCase', { users : response.data });
         })
@@ -20,7 +20,7 @@ res.render('pages/addCase');
 }
 
 exports.update_user = (req, res) =>{
-    axios.get('http://localhost:5000/api/users', { params : { id : req.query.id }})
+    axios.get('https://judiciary-information-system-qfdw.onrender.com/users', { params : { id : req.query.id }})
         .then(function(userdata){
             res.render("pages/update_user", { user : userdata.data})
         })
@@ -40,7 +40,7 @@ res.render('pages/register');
 }
 //added
 exports.viewJudges=(req,res)=>{
-    axios.get('http://localhost:5000/api/judges')
+    axios.get('https://judiciary-information-system-qfdw.onrender.com/judges')
         .then(function(response){
             res.render('pages/viewJudges', { judges : response.data });
         })
@@ -51,7 +51,7 @@ exports.viewJudges=(req,res)=>{
 
 
 exports.viewSession=(req,res)=>{
-    axios.get('http://localhost:5000/api/hearings')
+    axios.get('https://judiciary-information-system-qfdw.onrender.com/hearings')
         .then(function(response){
             res.render('pages/viewSession', { hearings : response.data });
         })
@@ -61,7 +61,7 @@ exports.viewSession=(req,res)=>{
 }
 
 exports.viewSummary=(req,res)=>{
-    axios.get('http://localhost:5000/api/summarys')
+    axios.get('https://judiciary-information-system-qfdw.onrender.com/summarys')
         .then(function(response){
             res.render('pages/viewSummary', { summarys : response.data });
         })

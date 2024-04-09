@@ -16,7 +16,7 @@ $("#update_user").submit(function(event){
 
 
     var request = {
-        "url" : `http://localhost:5000/api/users/${data.id}`,
+        "url" : `https://judiciary-information-system-qfdw.onrender.com/users/${data.id}`,
         "method" : "PUT",
         "data" : data
     }
@@ -33,7 +33,7 @@ if(window.location.pathname == "/view"){
         var id = $(this).attr("data-id")
 
         var request = {
-            "url" : `http://localhost:5000/api/users/${id}`,
+            "url" : `https://judiciary-information-system-qfdw.onrender.com/users/${id}`,
             "method" : "DELETE"
         }
 
